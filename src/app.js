@@ -18,30 +18,6 @@ class App extends Component {
           <MenuItem path="/articles">Articles</MenuItem>
           <MenuItem path="/comments">Comments</MenuItem>
         </Menu>
-        {/*
-        <div>
-          <div>
-            <NavLink to="/counter" activeStyle={{ color: 'red' }}>
-              counter
-            </NavLink>
-          </div>
-          <div>
-            <NavLink to="/filters" activeStyle={{ color: 'red' }}>
-              filters
-            </NavLink>
-          </div>
-          <div>
-            <NavLink to="/articles" activeStyle={{ color: 'red' }}>
-              articles
-            </NavLink>
-          </div>
-          <div>
-            <NavLink to="/comments/1" activeStyle={{ color: 'red' }}>
-              comments
-            </NavLink>
-          </div>
-        </div>
-*/}
         <Switch>
           <Redirect from="/" to="/articles" exact />
           <Route path="/counter" component={Counter} exact />
