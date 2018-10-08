@@ -1,16 +1,24 @@
 import React, { Component } from 'react'
-import { Route, NavLink, Switch, Redirect } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import ArticlesPage from './components/routes/articles'
 import CommentsPage from './components/routes/comments-page'
 import UserForm from './components/user-form'
 import Filters from './components/filters'
 import Counter from './components/counter'
+import Menu, { MenuItem } from './components/menu'
 
 class App extends Component {
   render() {
     return (
       <div>
         <UserForm />
+        <Menu>
+          <MenuItem path="/counter">Counter</MenuItem>
+          <MenuItem path="/filters">Filters</MenuItem>
+          <MenuItem path="/articles">Articles</MenuItem>
+          <MenuItem path="/comments">Comments</MenuItem>
+        </Menu>
+        {/*
         <div>
           <div>
             <NavLink to="/counter" activeStyle={{ color: 'red' }}>
@@ -33,6 +41,7 @@ class App extends Component {
             </NavLink>
           </div>
         </div>
+*/}
         <Switch>
           <Redirect from="/" to="/articles" exact />
           <Route path="/counter" component={Counter} exact />
